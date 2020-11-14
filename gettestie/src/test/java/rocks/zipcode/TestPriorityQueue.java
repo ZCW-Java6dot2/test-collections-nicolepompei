@@ -54,4 +54,19 @@ public class TestPriorityQueue {
         assertEquals(false, peopleQueue.contains("Jerry"));
 
     }
+
+    @Test
+    public void priorityQueuePollTest(){
+        PriorityQueue<String> peopleQueue = new PriorityQueue<>();
+
+        peopleQueue.add("Jerry");
+        peopleQueue.add("Sam");
+        peopleQueue.add("Sarah");
+
+        String expected = "Jerry";
+        String actual = peopleQueue.poll();
+
+        Assert.assertEquals(expected, actual);
+
+    }
 }
